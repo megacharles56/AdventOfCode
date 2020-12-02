@@ -22,10 +22,7 @@ int main(){
         high=stoi(subx);
         c=x[++i];
         subx=x.substr(i+3);
-        for(char ci : subx){
-            if(ci==c) counter++;
-        }
-        if(counter>=low&&counter<=high) ans++;
+        if((subx[low-1]==c&&subx[high-1]!=c)||(subx[high-1]==c&&subx[low-1]!=c)) ans++;
         cout << " " << ans << "\n";
     }
 }
